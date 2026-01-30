@@ -9,31 +9,35 @@ export function Navbar() {
   return (
 
     
-    <div className="nav">
+    
+      <div className="navbar">
       <img src="logo.svg" alt="logo" />
       <div className="search">
         <button className="searchicon">
           <LuSearch />
         </button>
-        <input type="text" placeholder="search for products" />
+        <input className="searchinput" type="text" placeholder="search for products" />
       </div>
       <div className="navicons">
         {isLoggedIn ? (
           <>
-            <button>
+            <button className="navbutton">
               <CiShoppingCart />
             </button>
-            <button>
+            <button className="navbutton">
               <CiHeart />
             </button>
-            <button>
+            <button className="navbutton">
               <CiUser />
             </button>
           </>
         ) : (
-          <button className="button">Sign In</button>
+          <button className="signin">Sign In</button>
         )}
       </div>
-    </div>
+
+      </div>
+
+  
   );
 }
