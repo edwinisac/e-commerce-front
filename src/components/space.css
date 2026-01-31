@@ -1,0 +1,10 @@
+.space {
+  height: 7vh;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .space {
+    height: 16.5vh;
+  }
+}
