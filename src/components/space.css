@@ -8,3 +8,13 @@
     height: 16.5vh;
   }
 }
+@media(max-width:450px){
+  .space{
+    height: 12vh;
+  }
+}
+@media(max-width:400px){
+  .space{
+    height: 14vh;
+  }
+}

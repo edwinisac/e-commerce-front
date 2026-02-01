@@ -9,7 +9,7 @@
     );
   
   
-      padding-left: 100px;
+      padding-left: 30px;
       color:white;
       padding-top:50px;
   }
@@ -76,7 +76,7 @@
   @media (max-width:800px) {
   
       .landingbanner{
-          padding-left: 80px;
+          padding-left: 30px;
       }
       h1{
           font-size: 40px;
@@ -93,7 +93,7 @@
   @media(max-width:650px){
    .landingbanner{
       height: 48vh;
-      padding-left: 40px;
+      padding-left: 30px;
       padding-top: 70px;
    }
    h1{
@@ -108,4 +108,14 @@
    .buttons{
       width: 70%;
    }
+  }
+
+  @media(max-width:450px){
+    .landingbanner{
+        height: 50vh;
+        padding-top: 50px;
+    }
+    .buttons{
+        width:80%;
+    }
   }

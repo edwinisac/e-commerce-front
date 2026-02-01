@@ -9,6 +9,7 @@
   z-index: 1000;
   width: 100%;
   background-color: rgba(241, 241, 241, 0.76);
+  backdrop-filter: blur(10px);
   /* allow height to grow on small screens when search moves below */
   height: auto;
   display: flex;

@@ -2,6 +2,8 @@ import { Navbar } from "../../components/Navbar";
 import { Space } from "../../components/Space";
 import { Banner } from "./Banner";
 import { Categories } from "./Categories";
+import { HomeProducts } from "./products-display/HomeProducts";
+
 
 import "./home.css";
 
@@ -12,6 +14,7 @@ export function Home() {
       <Space/>
       <Banner/>
       <Categories/>
+      <HomeProducts/>
 
 
 
