@@ -1,5 +1,6 @@
 import "./homeproducts.css";
-import image1 from "../../../assets/images/image1.jpg"
+import { Card } from "../../../components/Card";
+import { featuredData } from "../../../data/featureddata";
 
 export function HomeProducts() {
   return (
@@ -13,18 +14,9 @@ export function HomeProducts() {
           </a>
         </div>
         <div className="featuredlist">
-            <div className="productcard">
-                <div className="cardimage">
-                    <img src={image1} alt="" />
-                </div>
-                <div className="carddetails">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div className="demo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero et at eveniet quibusdam maxime corrupti nihil rerum! Ipsum est, ab architecto excepturi facilis voluptatem obcaecati eaque aut necessitatibus in atque!
+          {featuredData.map((item) => (
+            <Card key={item.id} data={item} />
+          ))}
         </div>
       </div>
     </>

@@ -1,0 +1,145 @@
+
+.productcard{
+    min-width:358px;
+    height: 480px;
+    border-radius: 25px;
+}
+.cardimage{
+    width: 100%;
+    height: 258px;
+    border-radius: 25px 25px 0px 0px;
+    overflow: hidden;
+    position: relative;
+}
+.cardimage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 0px 0px;
+    margin:0px;   
+    transition: transform 0.4s ease; 
+
+}
+.productcard:hover .cardimage img{
+    transform: scale(1.08);
+}
+
+.badge{
+    z-index: 1000;
+    position: absolute;
+    margin-left: 30px;
+    margin-top:10px;
+    background-color: rgba(255, 68, 0, 0.596);
+    color:white;
+    border-radius: 25px;
+    padding:0px 5px;
+}
+
+.carddetails{
+    width: 100%;
+    height: 222px;
+    border:1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 0px 0px 25px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+ 
+}
+.category{
+    font-size: 14px;
+    padding: 0px;
+    margin:0px;
+    text-align: left;
+    padding-left:10px;
+    margin:0px;
+    color:rgba(0, 0, 0, 0.555);
+}
+.name{
+    font-size:18px;
+    text-align: start;
+    padding-left: 10px;
+    margin:0px;
+}
+.rating{
+    width:60%;
+    text-align: start;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    margin:0px;
+}
+.star{
+    all:unset;
+    color:gold;
+
+}
+.ratingaverage{
+    color: black;
+}
+.ratingcount{
+    color:rgba(0, 0, 0, 0.479);
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:45%;
+    padding-left: 10px;
+    margin:0px;
+    justify-content: space-between;
+
+}
+.saleprice{
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0px;
+
+}
+.normalprice{
+    font-size: 12px;
+    text-decoration: line-through;
+    color:rgba(46, 42, 42, 0.678);
+    margin:0px;
+}
+.addtocart{
+    width:60%;
+    align-self: center;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    border:none;
+
+
+}
+.addtocart:hover{
+    cursor:pointer;
+    color:greenyellow;
+    transition: ease 0.4s;
+}
+.addcarticon{
+    font-size: 24px;
+}
+.addcarttext{
+    font-size: 16px;
+    font-weight: 800;
+    width: fit-content;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .productcard{
+        width: 95%;
+    }
+
+}
