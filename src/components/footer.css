@@ -1,0 +1,152 @@
+.footer {
+    height: 30vh;
+    background-color: rgb(8, 17, 36);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 4rem;
+    color: #e5e7eb;
+  }
+  
+  .footersub {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 0.75rem;
+    margin-left: 0px;
+    margin-top:25px;
+  }
+  
+  .footer-desc {
+    font-size: 0.9rem;
+
+    width: 100%;
+    line-height: 1.5;
+    color: #9ca3af;
+  }
+  
+  .footersub h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .footersub a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+  
+  .footersub a:hover {
+    color: #ffffff;
+  }
+  
+  /* SOCIAL ICONS */
+  .socials {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .socials a {
+    color: #9ca3af;
+    font-size: 1rem;
+  }
+  
+  .socials a:hover {
+    color: #ffffff;
+  }
+  
+  /* COPYRIGHT */
+  .copyright {
+    height: 10vh;
+    background-color: rgb(8, 17, 36);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 0.85rem;
+  }
+  
+
+
+  /* ========================= */
+/* TABLET (<= 1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+    .footer {
+      height: auto;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2.5rem 2rem;
+      justify-content: space-between;
+    }
+  
+    .footersub {
+      width: 45%;
+    }
+  
+    .footer-logo {
+      margin-top: 10px;
+    }
+  }
+  
+  /* ========================= */
+  /* MOBILE (<= 768px) */
+  /* ========================= */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+  
+    .footersub {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .footer-logo {
+      margin-top: 0;
+    }
+  
+    .footer-desc {
+      max-width: 300px;
+    }
+  
+    .socials {
+      justify-content: center;
+    }
+  }
+  
+  /* ========================= */
+  /* SMALL MOBILE (<= 480px) */
+  /* ========================= */
+  @media (max-width: 480px) {
+    .footer {
+      padding: 1.5rem 1rem;
+    }
+  
+    .footersub h4 {
+      font-size: 0.95rem;
+    }
+  
+    .footersub a {
+      font-size: 0.85rem;
+    }
+  
+    .copyright {
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 0 1rem;
+    }
+  }
+  

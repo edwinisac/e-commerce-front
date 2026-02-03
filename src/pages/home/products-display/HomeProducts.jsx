@@ -1,7 +1,8 @@
 import "./homeproducts.css";
 import { Card } from "../../../components/Card";
 import { featuredData } from "../../../data/featureddata";
-
+import{allproducts} from "../../../data/allproducts"
+import { GiArmoredBoomerang } from "react-icons/gi";
 export function HomeProducts() {
   return (
     <>
@@ -17,6 +18,21 @@ export function HomeProducts() {
           {featuredData.map((item) => (
             <Card key={item.id} data={item} />
           ))}
+        </div>
+      </div>
+      <div className="allproductshome">
+        <h2 className="featuredhead">All Products</h2>
+        <div className="allproductshomelist">
+          {
+            allproducts.map((item)=>{
+              return <Card key={item.id} data={item}/>
+            })
+          }
+        </div>
+        <div className="explore">
+          <button className="explorebutton">
+            view more <i className="exploreicon"><GiArmoredBoomerang/></i>
+          </button>
         </div>
       </div>
     </>

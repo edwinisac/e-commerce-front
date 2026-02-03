@@ -3,6 +3,7 @@ import { Space } from "../../components/Space";
 import { Banner } from "./Banner";
 import { Categories } from "./Categories";
 import { HomeProducts } from "./products-display/HomeProducts";
+import { Footer } from "../../components/Footer";
 
 
 import "./home.css";
@@ -15,6 +16,7 @@ export function Home() {
       <Banner/>
       <Categories/>
       <HomeProducts/>
+      <Footer/>
 
 
 
