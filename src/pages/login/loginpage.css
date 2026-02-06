@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  }
+  
+  .login-card {
+    width: 900px;
+    max-width: 95%;
+    height: 520px;
+    background: #ffffff;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* IMAGE SECTION */
+  .login-image {
+    flex: 1;
+    padding: 3rem;
+    color: white;
+    background: linear-gradient(
+      135deg,
+      rgba(62, 62, 65, 0.966),
+      rgba(124, 58, 237, 0)
+    ),
+    url("https://plus.unsplash.com/premium_photo-1720192861641-8ae1f5e7bd54?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-image h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .login-image p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  /* FORM SECTION */
+  .login-form {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-form h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+  }
+  
+  .login-form input {
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  }
+  
+
+  .newuser{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .signup{
+    font-weight: 700;
+    color:blueviolet;
+  }
+  /* BUTTONS */
+  .signin {
+    width:100%;
+    margin-top: 0.5rem;
+    padding: 0.9rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .signin:hover {
+    opacity: 0.9;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+  }
+  
+  .divider span {
+    margin: 0 10px;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  
+  /* SOCIAL BUTTONS */
+  .google,
+  .apple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.8rem;
+    margin-bottom: 0.7rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+  }
+  
+  .apple {
+    background: #111827;
+    color: white;
+    border: none;
+  }
+  
+  .google:hover,
+  .apple:hover {
+    background:linear-gradient(to left ,rgb(67, 151, 219),red);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .login-card {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .login-image {
+      min-height: 200px;
+    }
+  }
+  

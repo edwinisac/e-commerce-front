@@ -1,6 +1,7 @@
 
 .productcard{
     min-width:358px;
+    max-width: 358px;
     height: 480px;
     border-radius: 25px;
 }
