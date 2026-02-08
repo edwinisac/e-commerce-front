@@ -10,7 +10,6 @@ export function Navbar() {
   return (
     <div className="navbar">
       <Link to="/">
-        {" "}
         <img src="logo.svg" alt="logo" />
       </Link>
       <div className="search">
