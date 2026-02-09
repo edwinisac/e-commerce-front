@@ -9,7 +9,7 @@ export function Footer() {
       <footer className="footer">
         {/* BRAND / CONNECT */}
         <div className="connect footersub">
-          <img src="logo dark.svg" alt="Cartit logo" className="footer-logo" />
+          <img src="../../public/logo-dark.svg" alt="Cartit logo" className="footer-logo" />
           <p className="footer-desc">
             Your one-stop shop for premium electronics and gadgets.
           </p>
