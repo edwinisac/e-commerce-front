@@ -10,6 +10,8 @@ export const allproducts = [
     saleprice: 129.99,
     originalprice: 179.99,
     featured: false,
+    description:
+      "Compact wireless earbuds with active noise cancellation, deep bass, and long battery life for immersive listening.",
   },
   {
     id: 2,
@@ -19,9 +21,11 @@ export const allproducts = [
     sale: false,
     rateavg: 4.1,
     ratecount: 402,
-    saleprice: 79.99,
+    saleprice: 99.99,
     originalprice: 99.99,
     featured: false,
+    description:
+      "Lightweight fitness band with heart-rate monitoring, sleep tracking, and daily activity insights.",
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ export const allproducts = [
     saleprice: 249.99,
     originalprice: 329.99,
     featured: false,
+    description:
+      "Rugged 4K action camera with wide-angle lens, image stabilization, and waterproof design.",
   },
   {
     id: 4,
@@ -46,6 +52,8 @@ export const allproducts = [
     saleprice: 39.99,
     originalprice: 49.99,
     featured: false,
+    description:
+      "Multi-port USB-C hub with HDMI, USB, and fast charging support for laptops and tablets.",
   },
   {
     id: 5,
@@ -58,6 +66,8 @@ export const allproducts = [
     saleprice: 99.99,
     originalprice: 129.99,
     featured: false,
+    description:
+      "Voice-controlled smart speaker with rich sound, smart home integration, and virtual assistant support.",
   },
   {
     id: 6,
@@ -70,6 +80,8 @@ export const allproducts = [
     saleprice: 29.99,
     originalprice: 39.99,
     featured: false,
+    description:
+      "Sleek wireless charging pad compatible with all Qi-enabled smartphones and devices.",
   },
   {
     id: 7,
@@ -82,6 +94,8 @@ export const allproducts = [
     saleprice: 69.99,
     originalprice: 89.99,
     featured: false,
+    description:
+      "High-precision mechanical gaming controller designed for fast response and competitive gameplay.",
   },
   {
     id: 8,
@@ -94,9 +108,12 @@ export const allproducts = [
     saleprice: 159.99,
     originalprice: 179.99,
     featured: false,
+    description:
+      "Ultra-fast portable SSD with 1TB storage capacity for backups, gaming, and content creation.",
   },
 
-  // ===== Featured Products (featured: true) =====
+  // ===== Featured Products =====
+
   {
     id: 9,
     name: "Smart Watch",
@@ -108,6 +125,8 @@ export const allproducts = [
     saleprice: 299.99,
     originalprice: 399.99,
     featured: true,
+    description:
+      "Stylish smartwatch with fitness tracking, notifications, and customizable watch faces.",
   },
   {
     id: 10,
@@ -120,6 +139,8 @@ export const allproducts = [
     saleprice: 149.99,
     originalprice: 199.99,
     featured: true,
+    description:
+      "Over-ear wireless headphones offering comfort, clear audio, and extended battery life.",
   },
   {
     id: 11,
@@ -132,6 +153,8 @@ export const allproducts = [
     saleprice: 49.99,
     originalprice: 79.99,
     featured: true,
+    description:
+      "Ergonomic gaming mouse with adjustable DPI, RGB lighting, and ultra-responsive buttons.",
   },
   {
     id: 12,
@@ -144,6 +167,8 @@ export const allproducts = [
     saleprice: 129.99,
     originalprice: 159.99,
     featured: true,
+    description:
+      "Durable mechanical keyboard with tactile switches, backlighting, and premium build quality.",
   },
   {
     id: 13,
@@ -156,6 +181,8 @@ export const allproducts = [
     saleprice: 89.99,
     originalprice: 119.99,
     featured: true,
+    description:
+      "Portable Bluetooth speaker delivering powerful sound with deep bass and water resistance.",
   },
   {
     id: 14,
@@ -168,5 +195,10 @@ export const allproducts = [
     saleprice: 499.99,
     originalprice: 549.99,
     featured: true,
+    description:
+      "Next-gen VR headset with immersive visuals, precise tracking, and comfortable design.",
   },
 ];
+
+
+

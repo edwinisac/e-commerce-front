@@ -13,6 +13,10 @@ export function ProductDetail() {
   const current = allproducts.find((item) => item.id === Number(id));
 
   if (!current) return <p>Product not found</p>;
+  let price = Math.round(current.originalprice - current.saleprice);
+  let percentage = Math.round(
+    ((current.originalprice - current.saleprice) / current.originalprice) * 100
+  );
 
   return (
     <div className="product-page">
@@ -24,7 +28,7 @@ export function ProductDetail() {
       </Link>
 
       <section className="product-container">
-        <span className="badge-save">Save $100</span>
+        {price > 0 && <span className="badge-save">Save ${price}</span>}
 
         {/* Image */}
         <div className="product-image">
@@ -53,13 +57,15 @@ export function ProductDetail() {
             <span className="original-price">${current.originalprice}</span>
           </div>
 
-          <p className="save-message">You save $100 (25% off)</p>
+          {price > 0 && (
+            <p className="save-message">
+              You save ${price} ({percentage}% off)
+            </p>
+          )}
 
           {/* Description */}
           <h2 className="section-title">Description</h2>
-          <p className="product-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          <p className="product-description">{current.description}</p>
 
           {/* Actions */}
           <div className="actions">
