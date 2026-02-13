@@ -122,7 +122,12 @@
     display: flex;
     gap: 4px;
     font-size: 16px;
+  }
+  .color-star{
     color: #ffc107;
+  }
+  .normal-star{
+    color:rgba(0, 0, 0, 0.158);
   }
   
   .rating-avg {

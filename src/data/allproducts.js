@@ -47,7 +47,7 @@ export const allproducts = [
     img: "https://images.unsplash.com/photo-1589447388175-ac47d31be950?q=80&w=1170&auto=format&fit=crop",
     category: "Accessories",
     sale: false,
-    rateavg: 4.3,
+    rateavg: 3.3,
     ratecount: 611,
     saleprice: 39.99,
     originalprice: 49.99,

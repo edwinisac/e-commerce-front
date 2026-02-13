@@ -1,10 +1,17 @@
-import { useParams, Link } from "react-router-dom";
-import "./productDetail.css";
-import { allproducts } from "../../data/allproducts";
+import { ProductPrice } from "./ProductPrice";
+import { ProductFeatures } from "./ProductFeatures";
 import { Navbar } from "../../components/Navbar";
 import { Space } from "../../components/Space";
 import { Footer } from "../../components/Footer";
-import { FaArrowLeft, FaStar, FaRegHeart } from "react-icons/fa";
+import { ProductRating } from "./ProductRating";
+
+import { allproducts } from "../../data/allproducts";
+
+import { useParams, Link } from "react-router-dom";
+
+import "./productDetail.css";
+
+import { FaArrowLeft, FaRegHeart } from "react-icons/fa";
 import { BsCartPlus } from "react-icons/bs";
 import { PiShareNetworkThin } from "react-icons/pi";
 
@@ -14,9 +21,6 @@ export function ProductDetail() {
 
   if (!current) return <p>Product not found</p>;
   let price = Math.round(current.originalprice - current.saleprice);
-  let percentage = Math.round(
-    ((current.originalprice - current.saleprice) / current.originalprice) * 100
-  );
 
   return (
     <div className="product-page">
@@ -41,27 +45,14 @@ export function ProductDetail() {
           <h1 className="product-name">{current.name}</h1>
 
           {/* Rating */}
-          <div className="product-rating">
-            <div className="stars">
-              {[...Array(5)].map((_, i) => (
-                <FaStar key={i} />
-              ))}
-            </div>
-            <span className="rating-avg">{current.rateavg}</span>
-            <span className="rating-count">({current.ratecount})</span>
-          </div>
+          <ProductRating avg={current.rateavg} count={current.ratecount} />
 
           {/* Pricing */}
-          <div className="product-pricing">
-            <span className="sale-price">${current.saleprice}</span>
-            <span className="original-price">${current.originalprice}</span>
-          </div>
-
-          {price > 0 && (
-            <p className="save-message">
-              You save ${price} ({percentage}% off)
-            </p>
-          )}
+          <ProductPrice
+            saleprice={current.saleprice}
+            originalprice={current.originalprice}
+            price={price}
+          />
 
           {/* Description */}
           <h2 className="section-title">Description</h2>
@@ -84,15 +75,7 @@ export function ProductDetail() {
           </div>
 
           {/* Features */}
-          <div className="features">
-            <h2 className="section-title">Product Features</h2>
-            <ul>
-              <li>Free shipping on orders over $100</li>
-              <li>30-day return policy</li>
-              <li>1-year manufacturer warranty</li>
-              <li>Secure payment processing</li>
-            </ul>
-          </div>
+          <ProductFeatures saleprice={current.saleprice} />
         </div>
       </section>
 
