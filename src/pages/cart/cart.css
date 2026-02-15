@@ -34,19 +34,20 @@
 .cart-item {
     display: flex;
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding:10px;
     background: linear-gradient(99deg, #e2eaff 0%, #e7d4ff 100%);
     border: 2px solid #b3b3fe;
     border-radius: 14px;
     box-shadow: 0 2px 9px rgba(102, 126, 234, 0.1);
 }
 
-.cart-item img {
-    width: 112px;
-    height: 112px;
-    object-fit: cover;
+.cart-item-image {
+    width: 220px;
+    height: 161px;
     border-radius: 8px;
     background: #f6f7ff;
+    margin:0px;
+    margin:5px;
 }
 
 .item-info {

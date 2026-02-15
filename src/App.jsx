@@ -6,6 +6,7 @@ import { Register } from './pages/user-register/Register'
 import { Products } from './pages/products/Products'
 import { ProductDetail } from './pages/product-detail/ProductDetail'
 import { Cart } from './pages/cart/Cart'
+import { Orders } from './pages/orders/Orders'
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/products/" element={<Products/>}/>
         <Route path="/product/:id" element={<ProductDetail/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/orders" element={<Orders/>}/>
 
       </Routes>
 
