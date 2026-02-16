@@ -162,7 +162,7 @@ export function Orders() {
                         <div key={item.id} className="order-product-card">
                           <div className="product-image-wrapper">
                             <img 
-                              className="product-image" 
+                              className="product-image-orders" 
                               src={item.img} 
                               alt={item.name}
                               loading="lazy"

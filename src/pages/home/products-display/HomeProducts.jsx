@@ -1,10 +1,9 @@
 import "./homeproducts.css";
 import { Card } from "../../../components/Card";
-import { allproducts } from "../../../data/allproducts";
 import { GiArmoredBoomerang } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
-export function HomeProducts() {
+export function HomeProducts({products}) {
   return (
     <>
       <div className="featured">
@@ -16,7 +15,7 @@ export function HomeProducts() {
           </a>
         </div>
         <div className="featuredlist">
-          {allproducts
+          {products
             .filter((item) => item.featured)
             .map((item) => <Card key={item.id} data={item} />)}
         </div>
@@ -24,7 +23,7 @@ export function HomeProducts() {
       <div className="allproductshome">
         <h2 className="featuredhead">All Products</h2>
         <div className="allproductshomelist">
-          {allproducts.map((item) => {
+          {products.map((item) => {
             return <Card key={item.id} data={item} />;
           })}
         </div>
