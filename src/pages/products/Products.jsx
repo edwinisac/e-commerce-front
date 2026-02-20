@@ -10,7 +10,6 @@ import "./products.css";
 export function Products(){
     return(
         <>
-        <Navbar/>
         <Space/>
             <div className="products-container">
                 {
@@ -20,7 +19,6 @@ export function Products(){
                 }
             </div>
 
-        <Footer/>
         </>
     )
 }

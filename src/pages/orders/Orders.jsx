@@ -110,7 +110,6 @@ export function Orders() {
 
   return (
     <>
-      <Navbar />
       <Space />
 
       <div className="orders-container">
@@ -252,7 +251,6 @@ export function Orders() {
         )}
       </div>
 
-      <Footer />
     </>
   );
 }

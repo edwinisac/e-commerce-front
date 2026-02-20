@@ -1,12 +1,9 @@
-import { useState } from "react";
 import "./navbar.css";
 import { CiShoppingCart, CiHeart, CiUser } from "react-icons/ci";
 import { LuSearch } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
-export function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-
+export function Navbar({isLoggedIn}) {
   return (
     <div className="navbar">
       <Link to="/">

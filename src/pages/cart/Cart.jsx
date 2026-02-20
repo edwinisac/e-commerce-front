@@ -73,7 +73,6 @@ export function Cart() {
 
     return (
         <>
-            <Navbar />
             <Space />
 
             <div className="cart-wrapper">
@@ -133,7 +132,6 @@ export function Cart() {
                 </div>
             </div>
 
-            <Footer />
         </>
     );
 }

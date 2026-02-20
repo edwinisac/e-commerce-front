@@ -1,13 +1,11 @@
 import "./loginpage.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// , useNavigate
-
-export function LoginPage() {
+export function LoginPage({setCurrentLogin}) {
   const [users, setUsers] = useState([]);
 
   const [userName, setUserName] = useState("");
@@ -24,11 +22,22 @@ export function LoginPage() {
     fetchUsers();
   }, []);
 
-  // const navigate=useNavigate();
+  let navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    console.log(users.filter((user) => user.username === userName));
+    let currentUser = users.find(
+      (user) => user.username === userName && user.password === password
+    );
+
+    if(currentUser){
+      localStorage.setItem("user",JSON.stringify(currentUser))
+      navigate(`/user/${currentUser.id}`);
+      setCurrentLogin(currentUser);
+    }
+    else{
+      alert("invalid login attempt")
+    }
   };
   return (
     <div className="login-container">
@@ -40,7 +49,7 @@ export function LoginPage() {
         </div>
 
         {/* RIGHT : FORM SECTION */}
-        <form className="login-form">
+        <form className="login-form" onSubmit={(e) => handleSignIn(e)}>
           <h1>Sign In</h1>
 
           <input
@@ -60,11 +69,11 @@ export function LoginPage() {
             }}
           />
 
-          <button className="signin" onClick={(e) => handleSignIn(e)}>
+          <button className="signin" type="submit">
             Sign in
           </button>
           <h4 className="newuser">
-            New user?{" "}
+            New user?
             <Link to={"/Register"} className="signup">
               click here
             </Link>

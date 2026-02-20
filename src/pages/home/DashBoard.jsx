@@ -10,7 +10,7 @@ import "./home.css";
 
 
 
-export function Home({products}) {
+export function Dashboard({products}) {
 
 
 

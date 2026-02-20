@@ -24,7 +24,6 @@ export function ProductDetail() {
 
   return (
     <div className="product-page">
-      <Navbar />
       <Space />
 
       <Link className="back-link" to="/">
@@ -79,7 +78,6 @@ export function ProductDetail() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
