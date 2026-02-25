@@ -15,7 +15,7 @@ import { MainLayout } from "./pages/MainLayout";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [currentLogin, setCurrentLogin] = useState();
+  const [currentLogin, setCurrentLogin] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,7 +29,7 @@ function App() {
     fetchProducts();
   }, []);
 
-  // for getting a user is logged in or not
+  // for getting a user is logged in or not after refresh
 
   useEffect(() => {
     let storedUser = localStorage.getItem("user");
