@@ -15,7 +15,6 @@ import { MainLayout } from "./pages/MainLayout";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [currentLogin, setCurrentLogin] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,31 +28,14 @@ function App() {
     fetchProducts();
   }, []);
 
-  // for getting a user is logged in or not after refresh
 
-  useEffect(() => {
-    let storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      try {
-        setCurrentLogin(JSON.parse(storedUser));
-      } catch (error) {
-        console.error("invalid json in local storage", error);
-      }
-    }
-  }, []);
+
 
   return (
     <>
       <Routes>
         {/* routes with navbar */}
-        <Route
-          element={
-            <MainLayout
-              currentLogin={currentLogin}
-              setCurrentLogin={setCurrentLogin}
-            />
-          }
-        >
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home products={products} />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetail />} />
@@ -62,13 +44,12 @@ function App() {
           <Route path="/user/:id" element={<Dashboard products={products} />} />
         </Route>
 
-
-{/* Routes without navbar */}
+        {/* Routes without navbar */}
         <Route path="/register" element={<Register />} />
 
         <Route
           path="/login"
-          element={<LoginPage setCurrentLogin={setCurrentLogin} />}
+          element={<LoginPage />}
         />
 
         <Route path="*" element={<Error />} />

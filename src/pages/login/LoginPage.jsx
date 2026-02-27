@@ -2,10 +2,13 @@ import "./loginpage.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { AuthContext } from "../../context/AuthContext";
 
-export function LoginPage({setCurrentLogin}) {
+
+export function LoginPage() {
+  const{setCurrentLogin}=useContext(AuthContext)
   const [users, setUsers] = useState([]);
 
   const [userName, setUserName] = useState("");

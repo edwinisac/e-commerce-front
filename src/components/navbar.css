@@ -143,12 +143,15 @@ img {
 }
 
 .dropdown-item:hover {
-  background: #f5f5f5;
+  color:rgb(119, 5, 250);
 }
 
 .logout {
-  color: red;
+  color: rgba(255, 0, 0, 0.575);
   border:none;
+}
+.logout:hover{
+  color:rgb(255, 0, 0);
 }
 /* ------------ Responsive ------------ */
 
