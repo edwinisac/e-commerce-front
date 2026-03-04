@@ -1,16 +1,15 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./navbar.css";
 import { CiShoppingCart, CiHeart, CiUser } from "react-icons/ci";
 import { LuSearch } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 
 
 export function Navbar() {
 
-
-  const{currentLogin,setCurrentLogin}=useContext(AuthContext);
+  const{currentLogin,setCurrentLogin}=useAuth();
 
   const[isDropdownOpen,setDropDownOpen]=useState(false);
 
