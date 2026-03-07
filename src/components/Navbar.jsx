@@ -40,7 +40,8 @@ export function Navbar() {
         {currentLogin ? (
           <>
             <button className="navbutton">
-              <CiShoppingCart />
+              <Link to="/cart">              <CiShoppingCart />
+              </Link>
             </button>
             <button className="navbutton">
               <CiHeart />

@@ -12,6 +12,7 @@ import { Error } from "./pages/error/Error";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { MainLayout } from "./pages/MainLayout";
+import { Protect } from "./RouteProtection/Protect";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -28,29 +29,28 @@ function App() {
     fetchProducts();
   }, []);
 
-
-
-
   return (
     <>
       <Routes>
         {/* routes with navbar */}
         <Route element={<MainLayout />}>
+          <Route element={<Protect />}>
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route
+              path="/user/:id"
+              element={<Dashboard products={products} />}
+            />
+          </Route>
           <Route path="/" element={<Home products={products} />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/user/:id" element={<Dashboard products={products} />} />
         </Route>
 
         {/* Routes without navbar */}
         <Route path="/register" element={<Register />} />
 
-        <Route
-          path="/login"
-          element={<LoginPage />}
-        />
+        <Route path="/login" element={<LoginPage />} />
 
         <Route path="*" element={<Error />} />
       </Routes>
