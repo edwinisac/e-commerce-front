@@ -1,9 +1,17 @@
 import "./card.css";
 import { FaStar } from "react-icons/fa6";
 import { BsCartPlus } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
 
 export function Card({ data }) {
+  const{currentLogin}=useAuth();
+  const navigate=useNavigate();
+
+  const addToCartClick=()=>{
+    currentLogin?alert(data.id):navigate("/login");
+  }
   return (
     <>
       <div className="productcard">
@@ -31,7 +39,7 @@ export function Card({ data }) {
               </div>
             </div>
           </Link>
-          <button className="addtocart">
+          <button className="addtocart" onClick={addToCartClick}>
             <i className="addcarticon">
               <BsCartPlus />
             </i>

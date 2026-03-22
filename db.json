@@ -1,13 +1,19 @@
 {
   "users": [
-    { "id": 1, "username": "edwin", "password": "12@1", "role": "user" },
-    { "id": 2, "username": "edwin", "password": "abc123", "role": "admin" },
-    { "id": 3, "username": "maria", "password": "maria@456", "role": "user" },
-    { "id": 4, "username": "john", "password": "john!789", "role": "user" },
-    { "id": 5, "username": "edwin", "password": "edwin#321", "role": "user" },
-    { "id": 6, "username": "lisa", "password": "lisa*123", "role": "user" },
-    { "id": 7, "username": "alex", "password": "alex$999", "role": "admin" },
-    { "id": 8, "username": "maria", "password": "maria@789", "role": "user" }
+    {
+        "id": 1,
+        "username": "edwin",
+        "password": "12@1",
+        "role": "user",
+        "cart": []
+    },
+    { "id": 2, "username": "edwin", "password": "abc123", "role": "admin" ,"cart": []},
+    { "id": 3, "username": "maria", "password": "maria@456", "role": "user" ,"cart": []},
+    { "id": 4, "username": "john", "password": "john!789", "role": "user" ,"cart": []},
+    { "id": 5, "username": "edwin", "password": "edwin#321", "role": "user" ,"cart": []},
+    { "id": 6, "username": "lisa", "password": "lisa*123", "role": "user","cart": [] },
+    { "id": 7, "username": "alex", "password": "alex$999", "role": "admin","cart": [] },
+    { "id": 8, "username": "maria", "password": "maria@789", "role": "user" ,"cart": []}
   ],
 
   "products": [
